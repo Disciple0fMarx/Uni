@@ -7,10 +7,10 @@ char decalage(char c, int k) {
     /* Décale le caractère 'c' par la valeur 'k' */
     char result;
     if (c >= 'A' && c <= 'Z') {
-        result = (c - 'A' + k) % 26 + 65;
+        result = (c - 'A' + k) % 26 + 'A';
     } else {
         if (c >= 'a' && c <= 'z') {
-            result = (c - 'a' + k) % 26 + 97;
+            result = (c - 'a' + k) % 26 + 'a';
         } else {
             result = c;
         }
