@@ -3,7 +3,7 @@
 
 int main() {
     char key[] = "ERIC";
-    char message[] = "AaaaAaa !Aaa";
+    char message[] = "Abcdefghijklmnopqrstuvwxyz!!!";
 
     char encrypted[strlen(message)];
     cryptage_vigenere(message, encrypted, key);
