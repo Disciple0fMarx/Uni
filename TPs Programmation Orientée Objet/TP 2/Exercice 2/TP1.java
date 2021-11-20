@@ -14,7 +14,6 @@ public class TP1 {
         this.C = 0;
     }
 
-
     public TP1(int a, int b, int c) {
         this.A = a;
         this.B = b;
@@ -26,7 +25,6 @@ public class TP1 {
         return this.A;
     }
 
-
     public void set_A(int a) {
         this.A = a;
     }
@@ -36,7 +34,6 @@ public class TP1 {
         return this.B;
     }
 
-    
     public void set_B(int b) {
         this.B = b;
     }
@@ -45,7 +42,6 @@ public class TP1 {
     public int get_C() {
         return this.C;
     }
-
 
     public void set_C(int c) {
         this.C = c;
@@ -61,7 +57,6 @@ public class TP1 {
         }
         return (b >= c) ? b : c;
     }
-
 
     public static int Minimum(int a, int b, int c) {
         if (a <= b) {

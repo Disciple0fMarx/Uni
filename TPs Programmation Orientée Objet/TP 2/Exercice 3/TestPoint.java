@@ -22,5 +22,7 @@ public class TestPoint {
         System.out.println("------------------");
         System.out.println("P: " + P.toString());
         System.out.println("P2: " + P2.toString());
+
+        System.out.println(P.equals(P2));
     }
 }

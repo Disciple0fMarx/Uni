@@ -40,7 +40,12 @@ public class Point {
     }
 
 
-    public boolean equals(Point o) {
-        return (this.abscisse == o.getAbscisse() && this.ordonnee == o.getOrdonnee());
+    public boolean equals(Object o) {
+        if (o instanceof Point) {
+            Point Po = (Point)o;
+            if (this.abscisse == Po.getAbscisse() && this.ordonnee == Po.getOrdonnee()) return true;
+            return false;
+        }
+        return false;
     }
 }
