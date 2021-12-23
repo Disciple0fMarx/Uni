@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <ctype.h>
 
 
@@ -80,8 +81,9 @@ char *cryptoanalyse_vigenere(char *in, char *out, int longueur) {
     /* Permet de déterminer la clé qui crypte 'in' en 'out'
      * s'il existe.
      */
-    char temp[longueur];
-    char result[longueur];
+    char *temp, *result;
+    temp = (char *)malloc(longueur);
+    result = (char *)malloc(longueur);
     int i = 0, j = 0;
     do {
         if (isalpha(in[i])) {
