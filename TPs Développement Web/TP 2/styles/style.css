@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    color: red;
+    size: 100px;
+    font: sans-serif;
+}
+
+div {
+    border: 1px;
+    border-style: dashed;
+    border-color: #181818;
+}
