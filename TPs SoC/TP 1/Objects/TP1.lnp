@@ -1,5 +1,5 @@
 --cpu=Cortex-M4.fp.sp
-".\objects\main_gpio.o"
+".\objects\main_gpio_cmsis.o"
 ".\objects\led_f4discovery.o"
 ".\objects\stm32f4xx_hal.o"
 ".\objects\stm32f4xx_hal_cortex.o"

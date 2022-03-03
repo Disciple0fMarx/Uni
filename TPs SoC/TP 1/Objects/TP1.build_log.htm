@@ -17,35 +17,19 @@ Library Manager: ArmAr.exe V6.15
 Hex Converter:   FromElf.exe V6.15
 CPU DLL:         SARMCM3.DLL V5.33.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      UL2CM3.DLL V1.163.9.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
 Dialog DLL:      TCM.DLL V1.48.0.0
  
 <h2>Project:</h2>
 C:\Users\ASUS\My Programs\Uni\TPs SoC\TP 1\TP1.uvprojx
-Project File Date:  02/18/2022
+Project File Date:  03/03/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.15', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'Target 1'
-main_gpio.c(23): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOD -> MODER &= ~(1 << 25);   // Reset bit 25 (General Purpose Output Mode for PD12)
-                       ~~ ^~~~~~~~~~
-main_gpio.c(25): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOD -> OTYPER &= ~(1 << 12);  // Reset bit 12 (Output Push-Pull for PD12)
-                        ~~ ^~~~~~~~~~
-main_gpio.c(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOD -> OSPEEDR &= ~(1 << 24); // Reset bit 24
-                         ~~ ^~~~~~~~~~
-main_gpio.c(30): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOD -> PUPDR &= ~(1 << 24);   // Reset bit 24
-                       ~~ ^~~~~~~~~~
-main_gpio.c(41): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOD -> BSRR &= ~(1 << 28);    // Reset bit 28 (Reset PD12)
-                      ~~ ^~~~~~~~~~
-5 warnings generated.
-compiling main_gpio.c...
-compiling stm32f4xx_hal.c...
+Rebuild target 'Target 1'
+compiling main_gpio_cmsis.c...
 compiling LED_F4Discovery.c...
+compiling stm32f4xx_hal.c...
 C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c(217): warning: function 'HAL_NVIC_SystemReset' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 {
 ^
@@ -57,20 +41,20 @@ C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4x
                          ^
 2 warnings generated.
 compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_gpio.c...
 C:/Users/ASUS/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c(365): warning: unused parameter 'Regulator' [-Wunused-parameter]
 void HAL_PWR_EnterSLEEPMode(uint32_t Regulator, uint8_t SLEEPEntry)
                                      ^
 1 warning generated.
 compiling stm32f4xx_hal_pwr.c...
-compiling stm32f4xx_hal_gpio.c...
 compiling stm32f4xx_hal_pwr_ex.c...
-compiling stm32f4xx_hal_rcc_ex.c...
 compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_rcc_ex.c...
 assembling startup_stm32f407xx.s...
 compiling system_stm32f4xx.c...
 linking...
-Program Size: Code=532 RO-data=408 RW-data=0 ZI-data=1632  
-".\Objects\TP1.axf" - 0 Error(s), 8 Warning(s).
+Program Size: Code=1024 RO-data=440 RW-data=0 ZI-data=1632  
+".\Objects\TP1.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -122,18 +106,18 @@ Package Vendor: Keil
 
    * Component: Keil::Device:STM32Cube Framework:Classic:1.7.9
       Include file:  MDK\Templates\Inc\stm32f4xx_hal_conf.h
+      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
+      Source file:   MDK\Templates_LL\Src\main.c
+      Include file:  MDK\Templates_LL\Inc\main.h
+      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
+      Include file:  MDK\Templates\Inc\main.h
+      Include file:  CMSIS\Driver\Config\RTE_Device.h
       Source file:   MDK\Templates\Src\stm32f4xx_it.c
       Source file:   MDK\Templates\Src\main.c
-      Include file:  MDK\Templates_LL\Inc\main.h
-      Include file:  MDK\Templates\Inc\main.h
-      Source file:   MDK\Templates\Src\stm32f4xx_hal_msp.c
-      Include file:  CMSIS\Driver\Config\RTE_Device.h
-      Source file:   MDK\Templates_LL\Src\main.c
-      Include file:  MDK\Templates\Inc\stm32f4xx_it.h
 
    * Component: Keil::Device:STM32Cube HAL:Common:1.7.9
-      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
       Include file:  Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+      Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
 
    * Component: Keil::Device:STM32Cube HAL:Cortex:1.7.9
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
@@ -150,10 +134,10 @@ Package Vendor: Keil
       Source file:   Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
       Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
-      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
 Build Time Elapsed:  00:00:02
 </pre>
