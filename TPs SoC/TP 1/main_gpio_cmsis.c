@@ -7,16 +7,18 @@ void delay(int Dt);
 int main() {
 	LED_Initialize();
 	while (1) {
-		LED_On(4);
-		delay(1000000);
-		LED_Off(4);
-		delay(1000000);
+		uint32_t i;
+		for (i = 0; i < 4; i ++) {
+			LED_On(i);
+			delay(1000000);
+			LED_Off(i);
+		}
 	}
 }
 
 
 void delay(int Dt) {
-	volatile int i;
+	int i;
 	for (i = 0; i < Dt; i ++){
 		__ASM("nop");
 	}
