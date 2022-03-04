@@ -1,6 +1,9 @@
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -15,15 +18,22 @@ public class Serveur {
 
             // Création des flux d'entrée/sortie
             InputStream is = s.getInputStream();
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+
             OutputStream os = s.getOutputStream();
+            PrintWriter pw = new PrintWriter(os, true);
 
             // Transmission des messages
-            int requeteRecue = (int)is.read();
+            int requeteRecue = Integer.parseInt(br.readLine());
+            System.out.println("\nRequete recue avec succes! (Requete = " + requeteRecue + ")\nCalcul de double...\n");
             int reponse = requeteRecue * 2;  // Traitement
-            os.write(reponse);
+            System.out.println("Calcul de reponse termine avec succes! (Reponse = " + reponse + ")\nEnvoie de reponse en cours...\n");
+            pw.println(reponse);
+            System.out.println("Reponse envoyee aves succes!");
             s.close();
         } catch (IOException e) {
-            System.out.println("Problème d'entrée/sortie.");
+            System.out.println("Probleme d'entree/sortie.");
         }
     }
 }
