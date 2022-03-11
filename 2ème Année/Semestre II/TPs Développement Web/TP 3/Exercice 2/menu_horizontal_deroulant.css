@@ -1,0 +1,37 @@
+#menu ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+}
+
+#menu li {
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+    background: #70a5c9;
+    border: 1px solid green;
+    position: relative;
+}
+
+.sousmenu {
+    display: none;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+#menu li a {
+    display: block;
+    padding: 20px;
+} 
+
+#menu li a:hover {
+    background: green;
+    color: white;
+}
+
+#menu li:hover .sousmenu {
+    display:block;
+    position: absolute;
+}
