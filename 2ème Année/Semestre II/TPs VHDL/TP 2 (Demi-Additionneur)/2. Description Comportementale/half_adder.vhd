@@ -14,7 +14,7 @@ end half_adder;
 architecture behavior of half_adder is
 begin
     process(A, B)
-        variable n: std_logic := '0';
+        variable n: integer := '0';
         constant SUM: std_logic_vector(3 downto 0) := "0110";
         constant CARRY_OUT: std_logic_vector(3 downto 0) := "1000";
     begin
