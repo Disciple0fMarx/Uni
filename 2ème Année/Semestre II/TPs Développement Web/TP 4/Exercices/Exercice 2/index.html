@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul IMC</title>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <h1>Comment calculer IMC</h1>
+    <p>Simplement en divisant le poids (en kg) par le carré de la taille (m).
+        Un IMC normal se situe entre 18,5 et 25.
+        Pour connaitre votre IMC, pas besoin de sortir votre calculette, il vous suffit de compléter les champs ci-dessous.
+    </p>
+    <br>
+    <form method="get">
+        <div>
+            <label for="poids">Entrez votre poids (en kg)</label>
+            <br>
+            <input type="text" name="poids" id="poids">
+        </div>
+        <br>
+        <div>
+            <label for="taille">Entrez votre taille (en m)</label>
+            <br>
+            <input type="text" name="taille" 
+            id="taille">
+        </div>
+    </form>
+    <br>
+    <button onclick="getIMC()">Calculer IMC</button>
+    <br>
+    <p id="output"></p>
+    <p id="message"></p>
+</body>
+</html>
