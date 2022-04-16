@@ -11,7 +11,7 @@ const getIMC = () => {
     else if (result > 25) messageText = 'Vous êtes gros(se).';
     else messageText = 'Tout va bien!';
 
-    let condition = result >= 18.5 && result <= 25;
+    let condition = (result >= 18.5) && (result <= 25);
     let message = document.getElementById('message');
     message.textContent = messageText;
     message.style.color = condition ? 'green' : 'red';
