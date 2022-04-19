@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 
 public class Client {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             // Envoie d'une demande de connexion à un serveur
             Socket s = new Socket("localhost", 1234);

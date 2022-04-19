@@ -9,7 +9,7 @@ import java.net.Socket;
 
 
 public class Serveur {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             // Attente de connexion avec un client
             ServerSocket ss = new ServerSocket(1234);
