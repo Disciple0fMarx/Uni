@@ -13,7 +13,7 @@ public class Server {
             System.out.println("\n[Created instance of object]\n");
 
             Naming.rebind("rmi://localhost:1099/myObject", object);
-            System.out.println("\n[Added object to rmiregister]\n");
+            System.out.println("\n[Added object to RMI registry]\n");
         } catch (Exception e) {
             System.out.println("\n[" + e.toString() + "]\n");
         }
