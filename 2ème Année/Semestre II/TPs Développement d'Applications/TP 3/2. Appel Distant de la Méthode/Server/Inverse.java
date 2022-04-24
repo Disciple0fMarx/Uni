@@ -1,5 +1,13 @@
-public class Inverse implements InverseInterface {
-    public String reverseString(String str) {
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+
+public class Inverse extends UnicastRemoteObject implements InverseInterface {
+    public Inverse() throws RemoteException {
+        super();
+    }
+
+    public String reverseString(String str) throws RemoteException {
         int len = str.length();
         StringBuffer sb = new StringBuffer(len);
 
