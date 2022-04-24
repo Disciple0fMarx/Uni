@@ -3,8 +3,6 @@ import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.Naming;
 
-import java.net.MalformedURLException;
-
 public class Server {
     public static void main(String[] args) {
         try {
