@@ -4,44 +4,68 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="styles/style.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico">
+        <link href="styles/cv.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" type="image/x-icon" href="img/icons/cv.ico">
         <title>Curriculum Vitae</title>
     </head>
     <body>
-        <div title="header">
+        <header class="header">
             <h1>BAHRI Dhiaa Eddine</h1>
-            <small>dhya.jake@gmail.com | 53 422 247 | <a href="https://github.com/Disciple0fMarx" target="_blank">github/Disciple0fMarx</a></small>
-        </div>
+            <small>20 ans | Étudiant 2ème Année | License en Ingénierie des Systèmes Informatiques | <a href="http://www.issatso.rnu.tn/fo/index.php" target="_blank">ISSAT Sousse</a></small>
+        </header>
         <br>
-        <div title="content">
-            <div title="education">
-                <h2>Éducation</h2>
-                <b>License en Ingénierie des Systèmes Informatiques</b>
-                <br>
-                <a href="http://www.issatso.rnu.tn/fo/index.php" target="_blank">ISSAT de Sousse</a>
-            </div>
-            <div title="projects">
-                <h2>Projets</h2>
-                <ul>
-                    <li>
-                        <a href="https://github.com/Disciple0fMarx/Rock-Paper-Scissors" target="_blank">Un jeu simple de pierre, papier, ciseaux écrit en Python et Kivy</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Disciple0fMarx/Web-Calculator" target="_blank">Une calculatrice Web</a>
-                    </li>
-                </ul>
-            </div>
-            <div title="skills">
-                <h2>Compétences</h2>
-                <p><b>Langages: </b>Java, C, Python, SQL, Bash</p>
-                <p><b>Développement Web: </b>HTML/CSS, JavaScript, TypeScript</p>
-                <p><b>Technologies: </b>Git, LaTeX</p>
-            </div>
-        </div>
+        <table class="content">
+            <tr>
+                <th><h2>Éducation</h2></th>
+                <th><h2>Projets</h2></th>
+                <th><h2>Compétences</h2></th>
+            </tr>
+            <tr>
+                <td>
+                    <div title="education">
+                        <dl>
+                            <dt><b>Baccalauréat en Mathématiques</b></dt>
+                            <dd>Session 2020</dd>
+        
+                            <dt><b>Moyenne</b></dt>
+                            <dd>11,34/20</dd>
+                            
+                            <dt><b>Institut</b></dt>
+                            <dd>
+                                <a href="https://www.facebook.com/Lyc%C3%A9e-Ibn-Sina-Technique-Mahdia-248226321963176" target="_blank">Lycée Ibn Sina Mahdia</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </td>
+                <td>
+                    <div title="projects" class="projects">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/Disciple0fMarx/Rock-Paper-Scissors" target="_blank">Un jeu simple de pierre, papier, ciseaux écrit en Python et Kivy</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Disciple0fMarx/Web-Calculator" target="_blank">Une calculatrice Web (en JavaScript)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div title="skills" class="skills">
+                        <dl>
+                            <dt><b>Langages</b></dt>
+                            <dd>Java, C, Python, SQL, PL/SQL, Bash, Pascal</dd>
+                            <dt><b>Développement Web</b></dt>
+                            <dd>HTML/CSS, JavaScript, TypeScript</dd>
+                            <dt><b>Technologies</b></dt>
+                            <dd>Git, LaTeX</dd>
+                        </dl>
+                    </div>
+                </td>
+            </tr>
+        </table>
         <br>
-        <div title="footer">
+        <footer>
             <small>© 2022</small>
-        </div>
+        </footer>
     </body>
 </html>

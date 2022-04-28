@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+    font-family: "Andale Mono", monospace, sans-serif;
+}
+
+body {
+    background: url("../img/backgrounds/cv.jpg");
+    background-position: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+h1 {
+    color: cornflowerblue;
+}
+
+h2 {
+    color: chartreuse;
+}
+
+li {
+    list-style: none;
+}
+
+li::before {
+    content: "\2022";
+    color: brown;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+header {
+    text-align: center;
+}
+
+small {
+    color: cyan;
+}
+
+dt {
+    color: aquamarine;
+}
+
+dd {
+    color: brown;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+.content {
+    padding: 5vw;
+    align-content: center;
+    display: flex;
+}
+
+div {
+    margin: 1vw;
+}
+
+footer {
+    padding: 1vw;
+}
