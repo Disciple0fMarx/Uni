@@ -26,7 +26,7 @@ void LED1_Init() {
 	GPIOD -> OTYPER &= (unsigned) ~(1 << 12);  // Reset bit 12 (Output Push-Pull for PD12)
 	
 	GPIOD -> OSPEEDR &= (unsigned) ~(1 << 24); // Reset bit 24
-	GPIOD -> OSPEEDR |= 1 << 25;    					 // Set bit 25 (High Speed for PD12)
+	GPIOD -> OSPEEDR |= 1 << 25;    		   // Set bit 25 (High Speed for PD12)
 	
 	GPIOD -> PUPDR &= (unsigned) ~(1 << 24);   // Reset bit 24
 	GPIOD -> PUPDR |= 1 << 25;                 // Set bit 25 (Pull-Down for PD12)
